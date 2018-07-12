@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<!-- Configurações da conexão -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gerenciador2010</property>   
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>     
+        
+        <!-- Dialeto utilizado -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- Auto criação da base da dados -->
+		<property name="hbm2ddl.auto">create</property>
+		
+		<!-- Classes anotadas -->
+		<mapping class="to.Competidor" />
+		<mapping class="to.Contato" />
+		<mapping class="to.Endereço" />
+		<mapping class="to.Modalidades" />
+		<mapping class="to.Tentativas" />
+	 		           
+	</session-factory>
+</hibernate-configuration>
